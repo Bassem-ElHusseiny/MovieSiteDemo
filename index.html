@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/fw.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  
+  <title>Movies</title>
+</head>
+<body>
+<nav class="navbar">
+<div class="container">
+  <div class="bar">
+<div class="logo">
+  <a   href="#">
+    <img src="images/logo.png" alt="">
+  </a>
+</div>
+<div class="bar_icon">
+<div class="trigger" onclick="trigger(this)">
+<span></span>
+<span></span>
+</div>
+<span></span>
+<i class="fa-solid fa-magnifying-glass" id="search_trig" onclick=searchBar()></i>
+</div>
+</div>
+<div class="menu">
+  <ul>
+    <li>
+      <a href="#">Home</a>
+    </li>
+    <li class="dropdown">
+      <a href="#">movies</a>
+      <ul class=" drop-list">
+        <li>
+          <a href="">Action</a>
+        </li>
+        <li>
+          <a href="">Adventure</a>
+        </li>
+        <li>
+          <a href="">Animation</a>
+        </li>
+        <li>
+          <a href="">Comedy</a>
+        </li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">Series</a>
+      <ul class=" drop-list">
+        <li>
+          <a href="">Action</a>
+        </li>
+        <li>
+          <a href="">Adventure</a>
+        </li>
+        <li>
+          <a href="">Animation</a>
+        </li>
+        <li>
+          <a href="">Comedy</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Animation</a>
+    </li>
+    <li>
+      <a href="#">tv</a>
+    </li>
+  </ul>
+</div>
+
+<div class="search">
+  <input type="text">
+  <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+</div>
+
+</div>
+  </nav>
+<div class="slider">
+
+  <div class="slide">
+  <div class="arrow_left" onclick="left(event)">
+    <i class="fa-solid fa-chevron-left"></i></div>
+  <div class="slidesContainer">
+  <div class="element "> <img src="images/slider_1.jpg" alt="">
+    <div class="slideContent">
+      <div class="title">
+        <h2><span>Avatar: The Way of Water<span></span></h2>
+      </div>
+      <div class="play">
+      <a href="">
+        <i class="fa-solid fa-circle-play"></i>
+      </a>
+
+      </div>
+
+      <div class="tags">
+        <span class="year">2022</span>
+        <span class="quality">web-dl</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          7.8
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="element "> <img src="images/slider_2.jpg" alt="">
+    <div class="slideContent">
+      <div class="title">
+        <h2><span>Extraction 2<span></span></h2>
+      </div>
+      <div class="play">
+      <a href="">
+        <i class="fa-solid fa-circle-play"></i>
+      </a>
+
+      </div>
+
+      <div class="tags">
+        <span class="year">2023</span>
+        <span class="quality">web-dl</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          7.9
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="element "> <img src="images/slider_3.jpg" alt="">
+    <div class="slideContent">
+      <div class="title">
+        <h2><span>John Wick: Chapter 4<span></span></h2>
+      </div>
+      <div class="play">
+      <a href="">
+        <i class="fa-solid fa-circle-play"></i>
+      </a>
+
+      </div>
+
+      <div class="tags">
+        <span class="year">2023</span>
+        <span class="quality">web-dl</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          7.9
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="element "> <img src="images/slider_4.jpg" alt="">
+    <div class="slideContent">
+      <div class="title">
+        <h2><span>The Flash<span></span></h2>
+      </div>
+      <div class="play">
+      <a href="">
+        <i class="fa-solid fa-circle-play"></i>
+      </a>
+
+      </div>
+
+      <div class="tags">
+        <span class="year">2023</span>
+        <span class="quality">web-dl</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <div class="arrow_right" onclick="right(event)">
+    <i class="fa-solid fa-chevron-right"></i></div>
+    
+  <div class="sliderPagination">
+  </div>
+
+</div>
+</div>
+<div class="content">
+  <div class="container">
+<section class="update">
+  <div class="sectitle">
+    <h2><span>Top MOVIES</span></h2>
+    <div class="secCate">
+
+    </div>
+    
+  </div>
+ 
+  <div class="update-slider">
+    <div class="carousel-prev">
+      <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="carousel-next">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="carousel">
+      <div class="carousel-container">
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_1.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">Spider-Man: Across the Spider-Verse</div>
+        <div class="cardtag">
+          <span class="year">2023</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Animation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_2.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">Fast X</div>
+        <div class="cardtag">
+          <span class="year">2023</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Crime</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_3.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">Ant-Man And The Wasp: Quantumania </div>
+        <div class="cardtag">
+          <span class="year">2023</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Science Fiction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_4.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">Avatar: The Way Of Water</div>
+        <div class="cardtag">
+          <span class="year">2022</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Science Fiction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_5.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">The Flash</div>
+        <div class="cardtag">
+          <span class="year">2023</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Science Fiction</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customCard carousel-card">
+    <div class="cardheader">
+      <span class="quality">web-dl</span>
+      <span class="epsnumber">20</span>
+      <span class="rating">
+        <i class="fa-solid fa-star"></i>
+        5.1
+      </span>
+    </div>
+    <div class="cardbody">
+      <div class="cardimg">
+        <a href="">
+          <img src="images/card_6.jpg" alt="">
+          <div class="cardicon">
+            <i class="fa-sharp fa-solid fa-circle-play"></i>
+            <span></span>
+          </div>
+        </a>
+      </div>
+      <div class="cardcontent">
+        <div class="cardtitle">John Wick: Chapter 4</div>
+        <div class="cardtag">
+          <span class="year">2023</span>
+          <span class="cate">Action</span>
+          <span class="cate">Fantasy</span>
+          <span class="cate">Crime</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+  </div>
+</section>
+<section>
+  <div class="sectitle">
+    <h2><span>Movies</span></h2>
+    <div class="secCate">
+
+    </div>
+    
+  </div>
+ 
+  <div class="sectionBody">
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_1.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Spider-Man: Across the Spider-Verse</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Animation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_2.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Fast X</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_3.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Ant-Man And The Wasp: Quantumania </div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_4.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Avatar: The Way Of Water</div>
+          <div class="cardtag">
+            <span class="year">2022</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_5.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">The Flash</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_6.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">John Wick: Chapter 4</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_1.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Spider-Man: Across the Spider-Verse</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Animation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_2.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Fast X</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_3.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Ant-Man And The Wasp: Quantumania </div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_4.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Avatar: The Way Of Water</div>
+          <div class="cardtag">
+            <span class="year">2022</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_5.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">The Flash</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_6.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">John Wick: Chapter 4</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<section>
+  <div class="sectitle">
+    <h2><span>series</span></h2>
+    <div class="secCate">
+
+    </div>
+    
+  </div>
+ 
+  <div class="sectionBody">
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_1.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Spider-Man: Across the Spider-Verse</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Animation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_2.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Fast X</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_3.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Ant-Man And The Wasp: Quantumania </div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_4.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Avatar: The Way Of Water</div>
+          <div class="cardtag">
+            <span class="year">2022</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_5.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">The Flash</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_6.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">John Wick: Chapter 4</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_1.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Spider-Man: Across the Spider-Verse</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Animation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_2.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Fast X</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_3.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Ant-Man And The Wasp: Quantumania </div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_4.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">Avatar: The Way Of Water</div>
+          <div class="cardtag">
+            <span class="year">2022</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_5.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">The Flash</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Science Fiction</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customCard">
+      <div class="cardheader">
+        <span class="quality">web-dl</span>
+        <span class="epsnumber">20</span>
+        <span class="rating">
+          <i class="fa-solid fa-star"></i>
+          5.1
+        </span>
+      </div>
+      <div class="cardbody">
+        <div class="cardimg">
+          <a href="">
+            <img src="images/card_6.jpg" alt="">
+            <div class="cardicon">
+              <i class="fa-sharp fa-solid fa-circle-play"></i>
+              <span></span>
+            </div>
+          </a>
+        </div>
+        <div class="cardcontent">
+          <div class="cardtitle">John Wick: Chapter 4</div>
+          <div class="cardtag">
+            <span class="year">2023</span>
+            <span class="cate">Action</span>
+            <span class="cate">Fantasy</span>
+            <span class="cate">Crime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+  <div class="pagination">
+    <ul class="pageNum">
+      <li>
+        <a href=""><<</a>
+      </li>
+      <li>
+        <a href="">1</a>
+      </li>
+      <li class="active">
+        <a href="">2</a>
+      </li>
+      <li>
+        <a href="">3</a>
+      </li>
+      <li>
+        <a href="">...</a>
+      </li>
+      <li>
+        <a href="">100</a>
+      </li>
+      <li>
+        <a href="">>></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+<footer>
+  <ul class="social">
+    <li class="facebook">
+      <a href="">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </li>
+    <li class="twitter">
+      <a href="">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </li>
+    <li class="instagram">
+      <a href="">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </li>
+    <li class="youtube">
+      <a href="">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+    </li>
+  </ul>
+  <p class="copyright">All rights reserved for the website  © 2023</p>
+</footer>
+ <script src="js/main.js"></script>
+ <script src="js/slider.js"></script>
+ <script src="js/Carousel.js"></script>
+</body>
+</html>
